@@ -8,8 +8,7 @@ coreq.coro takes a dictionary and items must have the following format:
     
   website : ( ip/website , port , page )
 
-    with coreq.coro({'www.python.org':('www.python.org',443,"") , 'www.reddit.com':('198.41.208.138', 443, 'r/marketing') }) as 
-e:
-      print e.keys()
-      print e.get("www.python.org").header
-			print e.get("www.python.org").result
+    with coreq.coro({'www.python.org':('www.python.org',443,"") , 'www.reddit.com':('198.41.208.138', 443, 'r/marketing') }) as e:
+      	print e.keys()
+      	print e.get("www.python.org").header
+      	print e.get("www.python.org").result
