@@ -137,6 +137,7 @@ cdef class coro:
 
 				elif <int>event == <int>select.EPOLLIN:
 					yield cs[fileno][0], track[fileno]
+					epoll.unregister(fileno)
 					del cs[fileno]
 
 				elif <int>event == <int>select.EPOLLERR:
